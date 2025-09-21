@@ -5,7 +5,7 @@ import connectDB from "./config/db.js";
 import authRoutes from "./routes/auth.js";
 import expenseRoutes from "./routes/expenses.js";
 import budgetRouter from "./routes/budget.js";
-import reportsRoute from "./routes/reports";
+import reportsRoute from "./routes/reports.js";
 
 dotenv.config();
 connectDB();
