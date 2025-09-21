@@ -43,7 +43,7 @@ export default function Dashboard() {
         setExpenses(data);
 
         // Fetch smart suggestions from Flask API
-        const suggestionsRes = await fetch("http://localhost:5001/suggestions", {
+        const suggestionsRes = await fetch("https://expense-tracker-5-ziyp.onrender.com", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
