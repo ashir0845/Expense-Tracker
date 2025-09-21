@@ -1,7 +1,7 @@
-const express = require("express");
-const { generateMonthlyReports } = require("../../sql-reports/generate-reports");
+import { Router } from "express";
+import { generateMonthlyReports } from "../../sql-reports/generate-reports";
 
-const router = express.Router();
+const router = Router();
 
 // GET /api/reports/:userId
 router.get("/:userId", async (req, res) => {
@@ -15,4 +15,4 @@ router.get("/:userId", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
