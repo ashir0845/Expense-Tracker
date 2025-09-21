@@ -1,4 +1,5 @@
-import { Pool } from "pg";
+import pkg from "pg";
+const { Pool } = pkg;
 
 // Configure PostgreSQL connection
 const pool = new Pool({
@@ -9,15 +10,8 @@ const pool = new Pool({
   port: 5432,
 });
 
-export interface MonthlyReport {
-  month: string;             // e.g., "2025-09"
-  total_spent: number;
-  top_category: string;
-  overbudget_categories: string[]; // categories that exceeded budget
-}
-
 // Function to generate last 3 months reports for a user
-export async function generateMonthlyReports(userId: string): Promise<MonthlyReport[]> {
+export async function generateMonthlyReports(userId) {
   const query = `
     SELECT month, total_spent, top_category, overbudget_categories
     FROM monthly_reports
