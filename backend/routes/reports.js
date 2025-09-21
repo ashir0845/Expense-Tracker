@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { generateMonthlyReports } from "../../sql-reports/generate-reports.js";
+import { generateMonthlyReports } from "../../sql-reports/generate-reports.ts";
 
 const router = Router();
 
