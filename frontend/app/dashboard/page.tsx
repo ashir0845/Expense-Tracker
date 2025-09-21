@@ -36,7 +36,7 @@ export default function Dashboard() {
 
       try {
         // Fetch user expenses
-        const res = await fetch("http://localhost:5000/api/expenses", {
+        const res = await fetch("https://expense-tracker-cqf0.onrender.com", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data: Expense[] = await res.json();
