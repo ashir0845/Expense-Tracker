@@ -1,3 +1,5 @@
-flask
-pandas
-flask-cors
+Flask==2.3.4
+flask-cors==3.0.10
+pandas==2.1.0
+numpy==1.27.0
+gunicorn==21.2.0
